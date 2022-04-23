@@ -1,5 +1,3 @@
-import { Divider } from 'antd'
-import React from 'react'
 import "./navbar.scss"
 
 const Navbar = () => {

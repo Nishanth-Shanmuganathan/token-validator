@@ -1,0 +1,39 @@
+@import "./../../../styles/variables";
+
+.input-field__wrapper {
+    width: 100%;
+
+    label {
+        margin: .5rem 0;
+        color: $dark-grey;
+        display: inline-block;
+    }
+
+    .ant-input {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 1px solid $border-color;
+        background-color: white !important;
+
+        &input {
+            height: 50px;
+        }
+
+        &:focus,
+        &:hover {
+            border-color: $border-color-hover;
+        }
+
+        &:focus {
+            border-color: $border-color-hover;
+            box-shadow: $input-border-box-shadow !important;
+        }
+    }
+}
+
+.input-password-visibility-off {
+    width: 14px;
+}

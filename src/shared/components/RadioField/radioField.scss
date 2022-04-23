@@ -1,0 +1,25 @@
+@import "./../../../styles/variables.scss";
+
+.radio-field {
+
+    &.ant-radio-group {
+
+        .ant-radio {
+            .ant-radio-inner {
+                &:hover {
+                    border-color: $primary-color;
+                }
+            }
+
+            &.ant-radio-checked {
+                .ant-radio-inner {
+                    border-color: $primary-color;
+
+                    &::after {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,8 @@
 import { Navigate, useRoutes } from "react-router-dom"
 import Cart from "../views/Cart";
 import Home from "../views/Home";
-import Token from "../views/Token";
 import { appRoutes } from "./routeConstants/appRoutes";
+import Coupon from "../views/Coupon";
 
 const AppRoutes = () => {
 
@@ -20,8 +20,8 @@ const AppRoutes = () => {
                     element: <Cart />
                 },
                 {
-                    path: appRoutes.TOKEN,
-                    element: <Token />
+                    path: appRoutes.COUPON,
+                    element: <Coupon />
                 },
             ]
         },

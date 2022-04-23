@@ -1,0 +1,17 @@
+@import "variables";
+
+.ant-radio {
+    .ant-radio-inner {
+        border-color: $dark-grey !important;
+    }
+
+    &.ant-radio-checked {
+        .ant-radio-inner {
+            border-color: $primary-color !important;
+
+            &::after {
+                background-color: $primary-color;
+            }
+        }
+    }
+}

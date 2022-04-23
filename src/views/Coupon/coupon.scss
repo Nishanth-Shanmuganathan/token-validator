@@ -1,0 +1,18 @@
+.coupon__wrapper {
+    width: 50%;
+    min-width: 500px;
+
+    .coupon__form {
+
+        .coupon__form--radio,
+        .coupon__form--actions {
+            margin: 1rem 0;
+        }
+
+        .coupon__form--actions {
+            .ant-btn {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}

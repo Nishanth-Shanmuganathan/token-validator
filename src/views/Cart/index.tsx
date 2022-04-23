@@ -6,7 +6,7 @@ import "./cart.scss"
 const Cart = () => {
     return (
         <div className='cart__wrapper'>
-            <NavLink to={appRoutes.TOKEN}>Cart</NavLink>
+            <NavLink to={appRoutes.COUPON}>Cart</NavLink>
         </div>
     )
 }

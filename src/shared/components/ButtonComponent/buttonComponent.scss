@@ -1,71 +1,19 @@
 @import "src/styles/variables";
 
-.button-component {
-    height: 40px !important;
-    border-radius: 10px !important;
-    font-size: 15px !important;
-    color: $menu-font-color !important;
-    border-color: $table-border !important;
+.button-component__wrapper {
 
-    span {
-        vertical-align: middle;
-    }
+    .button-component {
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        color: $dark-grey;
+        border-radius: 10px;
+        border: 1px solid $border-color;
 
-    .btn-icon::before {
-        color: $primary-color !important;
-    }
-
-    .icon-filter {
-        vertical-align: top;
-    }
-
-    &.ant-btn-primary {
-        color: #fff !important;
-        background: $primary-color !important;
-        border-color: unset !important;
-
-        .btn-icon::before {
-            color: #fff !important;
+        &.ant-btn-primary {
+            color: #fff;
+            background: $primary-color;
+            border-color: unset;
         }
     }
-
-    &.with-suffix {
-        margin-right: 0 !important;
-        border-top-right-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
-    }
-
-    &.text-btn {
-        border: none;
-        background-color: transparent !important;
-
-        span {
-            color: $primary-color;
-        }
-
-        &.mini {
-            padding: 0;
-
-            span {
-                font-size: 12px;
-            }
-        }
-    }
-}
-
-
-.ant-btn-text {
-    height: 52px;
-    background-color: #FFFFFF !important;
-}
-
-.ant-btn-loading {
-    width: auto !important;
-}
-
-.btn-icon {
-    margin-right: 12px;
-    font-size: 18px;
-    color: #4F4F4F;
-    vertical-align: middle;
 }
