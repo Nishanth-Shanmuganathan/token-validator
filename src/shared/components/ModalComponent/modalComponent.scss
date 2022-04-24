@@ -1,0 +1,14 @@
+.ant-modal.modal-component__wrapper {
+    .ant-modal-content {
+        border-radius: 20px;
+
+        .ant-modal-close {
+            top: .5rem;
+            right: .5rem;
+        }
+
+        .ant-modal-body {
+            border-radius: 20px;
+        }
+    }
+}

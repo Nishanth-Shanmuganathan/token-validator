@@ -11,6 +11,8 @@ import DatepickerComponent from '../../shared/components/DatepickerComponent'
 import moment from 'moment'
 import couponValidationSchema from './coupon.validation'
 import CartService from '../../services/CartService'
+import { Link } from 'react-router-dom'
+import { appRoutes } from '../../routes/routeConstants/appRoutes'
 
 const discountModes = [
     { label: "Flat discount", value: DiscountTypes.FLAT_DISCOUNT },
@@ -31,6 +33,10 @@ const Coupon = () => {
 
     return (
         <div className="coupon__wrapper">
+            <Link to={appRoutes.CART}>
+                <i className='icon-arrow-left2'></i>
+                <span>Back to cart</span>
+            </Link>
             <h1 className='coupon--page-header'>Create new coupon</h1>
             <Formik
                 validationSchema={couponValidationSchema}
@@ -42,7 +48,6 @@ const Coupon = () => {
                             <InputField
                                 type={'text'}
                                 name={'code'}
-                                value={values.code}
                                 title={'Coupon code'}
                                 placeholder={'Enter coupon code'}
                                 onChange={e => setFieldValue("code", e.target?.value?.toUpperCase())}
@@ -79,9 +84,9 @@ const Coupon = () => {
                                 options={discountModes}
                                 onChange={value => {
                                     setFieldValue("discountMode", value)
-                                    setFieldValue("flat", null)
-                                    setFieldValue("discount", null)
-                                    setFieldValue("maximumDiscountValue", null)
+                                    setFieldValue("flat", undefined)
+                                    setFieldValue("discount", undefined)
+                                    setFieldValue("maximumDiscountValue", undefined)
                                 }}
                             />
                         </Col>

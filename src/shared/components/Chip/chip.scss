@@ -1,0 +1,18 @@
+@import "./../../../styles/variables";
+
+button.ant-btn.chip {
+    margin: .5rem .25rem;
+    padding: .25rem 1rem;
+    border-radius: 50px;
+    color: $dark-grey;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}

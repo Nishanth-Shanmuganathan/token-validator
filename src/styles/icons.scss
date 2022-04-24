@@ -25,6 +25,23 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close-solid:before {
+    content: "\e904";
+}
+
+.icon-information-solid:before {
+    content: "\e902";
+}
+
+.icon-check-circle:before {
+    content: "\e903";
+}
+
+.icon-inr:before {
+    content: "\e901";
+    font-size: smaller;
+}
+
 .icon-logo:before {
     content: "\e900";
     color: #e23744;
@@ -42,6 +59,14 @@
     content: "\e93f";
 }
 
+.icon-location:before {
+    content: "\e947";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
 .icon-happy:before {
     content: "\e9e0";
 }
@@ -50,10 +75,18 @@
     content: "\e9e6";
 }
 
+.icon-plus:before {
+    content: "\ea0a";
+}
+
 .icon-cross:before {
     content: "\ea0f";
 }
 
 .icon-login:before {
     content: "\ea13";
+}
+
+.icon-arrow-left2:before {
+    content: "\ea40";
 }

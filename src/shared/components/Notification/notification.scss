@@ -1,0 +1,60 @@
+@import "./../../../styles/variables";
+
+.ant-notification-notice {
+    border-radius: 5px !important;
+
+    .ant-notification-notice-content {
+
+        .ant-notification-notice-message {
+            margin-left: 2rem;
+            font-size: 14px;
+        }
+
+        .anticon {
+            font-size: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.ant-notification-notice-warning {
+        border: 1px solid #FAAC14;
+
+        .ant-notification-notice-icon {
+            font-size: 16px;
+            color: #FAAC14;
+        }
+    }
+
+    &.ant-notification-notice-success {
+        border: 1px solid #53C31B;
+
+        .ant-notification-notice-icon {
+            font-size: 18px;
+            color: #53C31B;
+        }
+    }
+
+    &.ant-notification-notice-error {
+        border: 1px solid #FF4D4E;
+
+        .ant-notification-notice-icon {
+            font-size: 16px;
+            color: #FF4D4E;
+        }
+    }
+
+    .ant-notification-notice-close {
+        top: 18px;
+
+        .ant-notification-notice-close-x {
+            font-size: 12px;
+        }
+
+        &:hover {
+            .ant-notification-notice-close-x {
+                color: $danger-color;
+            }
+        }
+    }
+}

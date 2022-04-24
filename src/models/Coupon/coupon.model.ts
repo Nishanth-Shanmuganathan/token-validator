@@ -3,7 +3,7 @@ import { alias, primitive, serializable } from "serializr";
 
 export class Coupon {
 
-    @serializable(alias("id", primitive()))
+    @serializable(alias("_id", primitive()))
     id?: string
 
     @serializable(alias("code", primitive()))
@@ -25,15 +25,15 @@ export class Coupon {
     validTill?: string
 
     @serializable(alias("minimum_order_value", primitive()))
-    minimumOrderValue?: string
+    minimumOrderValue?: number
 
     @serializable(alias("discount", primitive()))
-    discount?: string
+    discount?: number
 
     @serializable(alias("flat", primitive()))
-    flat?: string
+    flat?: number
 
     @serializable(alias("maximum_discount_value", primitive()))
-    maximumDiscountValue?: string
+    maximumDiscountValue?: number
 
 }

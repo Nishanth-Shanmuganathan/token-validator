@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { serialize } from "serializr"
+import { generatePath } from "react-router-dom"
+import { deserialize, serialize } from "serializr"
 import { NotificationTypes } from "../../enums/notificationTypes"
 import axiosInstance from "../../interceptor/axiosInstance"
 import { Coupon } from "../../models/Coupon/coupon.model"
@@ -10,10 +11,17 @@ const CartService = () => {
 
     const [loading, setLoading] = useState<boolean>(false)
 
-    const fetchTokens = async () => {
+    const [coupons, setCoupons] = useState<Array<Coupon>>([])
+
+    const [status, setStatus] = useState<boolean>(false)
+    const [message, setMessage] = useState<string>('')
+
+    const fetchCoupons = async () => {
         setLoading(true)
         try {
-
+            const response = await axiosInstance.get(apiRoutes.COUPON)
+            const coupons = deserialize(Coupon, response.data["coupons"]) as unknown as Coupon[]
+            setCoupons(coupons)
         } catch (error) {
 
         } finally {
@@ -39,10 +47,29 @@ const CartService = () => {
         }
     }
 
+    const fetchCouponValidity = async (id: string, amount: number) => {
+        setLoading(true)
+        try {
+            const API_URL = generatePath(apiRoutes.COUPON_VALIDITY, { id })
+            const response = await axiosInstance.post(API_URL, { amount })
+            setStatus(response.data.success);
+            setMessage(response.data.message);
+            return response.data
+        } catch (error) {
+
+        } finally {
+            setLoading(false)
+        }
+    }
+
     return {
+        status,
         loading,
-        fetchTokens,
+        coupons,
+        message,
+        fetchCoupons,
         createCoupon,
+        fetchCouponValidity,
     }
 
 }

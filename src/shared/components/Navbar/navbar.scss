@@ -7,85 +7,82 @@
     height: 72px;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
 
     .navbar__logo-wrapper {
+
         .icon-logo {
             font-size: 30px;
         }
     }
 
     .navbar__search-bar-wrapper {
-        height: 50px;
-        width: 50%;
-        max-width: 500px;
-        display: flex;
-        border: 1px solid $border-color;
-        border-radius: 10px;
-        box-shadow: rgb(28 28 28 / 8%) 0px 2px 8px;
+        width: 100%;
 
-        .navbar__search-bar--location,
-        .navbar__search-bar--dish {
-            width: 50%;
-            padding-left: 1rem;
-            position: relative;
+        .navbar__search-bar {
+            margin: auto;
+            height: 50px;
+            width: 70%;
+            min-width: 300px;
+            max-width: 500px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            border: 1px solid $border-color;
+            border-radius: 10px;
+            box-shadow: rgb(28 28 28 / 8%) 0px 2px 8px;
 
-            input {
+            .navbar__search-bar--location,
+            .navbar__search-bar--dish {
+                width: 50%;
                 padding-left: 1rem;
-                width: 100%;
-                height: auto;
-                border: none;
-                font-size: 14px;
-                font-weight: 200;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-                &:focus {
-                    outline: none;
+                input {
+                    padding-left: 1rem;
+                    width: 100%;
+                    height: auto;
+                    border: none;
+                    font-size: 14px;
+                    font-weight: 200;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
-        }
 
-        hr {
-            border: none;
-            border-left: 1px solid $dark-grey;
-        }
-
-        .navbar__search-bar--location {
-            width: 30%;
-
-            input {
-                color: $dark-grey;
+            hr {
+                border: none;
+                border-left: 1px solid $dark-grey;
             }
 
-            i {
-                color: red;
+            .navbar__search-bar--location {
+                width: 30%;
+
+                input {
+                    color: $dark-grey;
+                }
+
+                i {
+                    font-size: 20px;
+                    color: $primary-color;
+                }
             }
-        }
 
-        .navbar__search-bar--dish {
-            width: 70%;
+            .navbar__search-bar--dish {
+                width: 70%;
 
-            i {
-                color: $dark-grey;
+                i {
+                    font-size: 18px;
+                    color: $dark-grey;
+                }
             }
-        }
-    }
-
-    .navbar__login-wrapper {
-        .icon-login {
-            margin: 0 .5rem 0 0;
-            font-size: 20px;
-        }
-
-        .navbar__login--text {
-            display: inline-block;
-            vertical-align: super;
         }
     }
 }

@@ -10,7 +10,6 @@ interface InputFieldProps {
     type: string;
     title?: string;
     name: string;
-    value?: string;
     placeholder: string;
     onChange?: (value: any) => void
 }
